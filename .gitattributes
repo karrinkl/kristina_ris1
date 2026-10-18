@@ -1,0 +1,5 @@
+# Единые окончания строк в репозитории; Git сам подставит CRLF в рабочей копии Windows при необходимости.
+* text=auto eol=lf
+*.sln text eol=crlf
+*.png binary
+*.docx binary

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CandySales</RootNamespace>
+    <AssemblyName>CandySales</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Тестам нужен доступ к internal-классу разбора пользовательского ввода. -->
+    <InternalsVisibleTo Include="CandySales.Tests" />
+  </ItemGroup>
+
+</Project>

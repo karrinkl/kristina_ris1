@@ -1,0 +1,22 @@
+# Результаты сборки .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.trx
+
+# Пользовательские файлы IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.swp
+
+# Журнал продаж, создаваемый приложением при запуске
+sales-journal.csv
+
+# Системные файлы
+.DS_Store
+Thumbs.db
