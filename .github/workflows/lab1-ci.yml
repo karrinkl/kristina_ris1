@@ -34,9 +34,17 @@ jobs:
           persist-credentials: false
 
       - name: Setup .NET 8 SDK
+        id: setup-dotnet
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
+
+      # На раннерах предустановлены более новые SDK; global.json, созданный только в CI,
+      # заставляет dotnet использовать именно установленный выше SDK 8.0.
+      - name: Pin .NET 8 SDK for this run
+        run: |
+          dotnet new globaljson --sdk-version "${{ steps.setup-dotnet.outputs.dotnet-version }}" --force
+          dotnet --version
 
       - name: Show .NET info
         run: dotnet --info
